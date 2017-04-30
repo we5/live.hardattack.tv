@@ -3,8 +3,9 @@ source "https://rubygems.org"
 
 ruby '2.4.0'
 
+gem "guard-haml"
+gem "puma"
+gem "rack"
+
 gem "haml"
 gem "sass"
-gem "guard-haml"
-gem "rack"
-gem "puma"
