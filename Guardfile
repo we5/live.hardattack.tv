@@ -6,6 +6,6 @@
 # notifications: true                send notifictions to Growl/libnotify/Notifu
 # haml_options: { ugly: true }    pass options to the Haml engine
 
-guard :haml, input: "src", output: "public" do
+guard :haml, input: "src", output: "docs" do
   watch(/^.+(\.html\.haml)$/)
 end
