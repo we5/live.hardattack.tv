@@ -1,0 +1,60 @@
+!!!
+%head
+  %title Live from the bike
+
+  :scss
+    body {
+      padding-bottom: 50px;
+    }
+
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .iframe {
+      height: 500px;
+      position: relative;
+
+      &.velotour {
+        min-height: 741px;
+      }
+
+      &.video {
+        height: auto;
+        padding-bottom: 56.25%;
+
+        iframe {
+          position: absolute;
+        }
+      }
+    }
+
+%body
+  %h1 Hardattack TV
+
+  %h2 Live from SKODA Velotour 2017
+
+  %section.livestream
+    %h3 Livestream
+
+    .iframe.video.ustream
+      %iframe(src="https://www.ustream.tv/embed/23175392?html5ui" style="border: 0 none transparent;" webkitallowfullscreen allowfullscreen)
+
+  %section.instagram
+    %h3 Instagram
+
+    %script(src="https://snapwidget.com/js/snapwidget.js")
+    %iframe(src="https://snapwidget.com/embed/375092" class="snapwidget-widget" scrolling="no")
+
+  %section.tracking
+    %h3 Tracking
+
+    -# RACEMAP
+    -#
+      .iframe
+        %iframe(src="https://racemap.com/player/eschborn-frankfurt-110km_2017-05-01"  scrolling="no")
+
+    .iframe.velotour
+      %iframe(src="//www.mapmytracks.com/widgets/event/2388808/2388810" scrolling="no")
