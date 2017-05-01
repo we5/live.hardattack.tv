@@ -9,3 +9,5 @@
 guard :haml, input: "src", output: "docs" do
   watch(/^.+(\.html\.haml)$/)
 end
+
+guard 'sass', input: 'src/styles', output: 'docs/stylesheets'
